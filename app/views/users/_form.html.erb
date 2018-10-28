@@ -1,0 +1,107 @@
+<%= form_with(model: user, local: true) do |form| %>
+  <% if user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lastname %>
+    <%= form.text_field :lastname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :birthday %>
+    <%= form.date_select :birthday %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :password %>
+    <%= form.text_field :password %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gender_id %>
+    <%= form.text_field :gender_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :document_type_id %>
+    <%= form.text_field :document_type_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :documentNumber %>
+    <%= form.text_field :documentNumber %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone %>
+    <%= form.text_field :phone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cellphone %>
+    <%= form.text_field :cellphone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :civicoins %>
+    <%= form.number_field :civicoins %>
+  </div>
+
+  <div class="field">
+    <%= form.label :blood_type_id %>
+    <%= form.text_field :blood_type_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nationality %>
+    <%= form.text_field :nationality %>
+  </div>
+
+  <div class="field">
+    <%= form.label :secondaryNationality %>
+    <%= form.text_field :secondaryNationality %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pictureLarge %>
+    <%= form.text_field :pictureLarge %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pictureMedium %>
+    <%= form.text_field :pictureMedium %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pictureThumbnail %>
+    <%= form.text_field :pictureThumbnail %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

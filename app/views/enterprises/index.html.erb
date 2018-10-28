@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Enterprises</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Nit</th>
+      <th>Address</th>
+      <th>Phone</th>
+      <th>Website</th>
+      <th>Facebook</th>
+      <th>Instagram</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>Description</th>
+      <th>Enterprise sector</th>
+      <th>Ispublic</th>
+      <th>Logo</th>
+      <th>Coverpage</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @enterprises.each do |enterprise| %>
+      <tr>
+        <td><%= enterprise.name %></td>
+        <td><%= enterprise.nit %></td>
+        <td><%= enterprise.address %></td>
+        <td><%= enterprise.phone %></td>
+        <td><%= enterprise.website %></td>
+        <td><%= enterprise.facebook_id %></td>
+        <td><%= enterprise.instagram_id %></td>
+        <td><%= enterprise.latitude %></td>
+        <td><%= enterprise.longitude %></td>
+        <td><%= enterprise.description %></td>
+        <td><%= enterprise.enterprise_sector %></td>
+        <td><%= enterprise.isPublic %></td>
+        <td><%= enterprise.logo %></td>
+        <td><%= enterprise.coverPage %></td>
+        <td><%= link_to 'Show', enterprise %></td>
+        <td><%= link_to 'Edit', edit_enterprise_path(enterprise) %></td>
+        <td><%= link_to 'Destroy', enterprise, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Enterprise', new_enterprise_path %>

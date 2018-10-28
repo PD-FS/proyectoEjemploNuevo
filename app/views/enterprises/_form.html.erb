@@ -1,0 +1,87 @@
+<%= form_with(model: enterprise, local: true) do |form| %>
+  <% if enterprise.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(enterprise.errors.count, "error") %> prohibited this enterprise from being saved:</h2>
+
+      <ul>
+      <% enterprise.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nit %>
+    <%= form.text_field :nit %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone %>
+    <%= form.text_field :phone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :website %>
+    <%= form.text_field :website %>
+  </div>
+
+  <div class="field">
+    <%= form.label :facebook_id %>
+    <%= form.text_field :facebook_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :instagram_id %>
+    <%= form.text_field :instagram_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :latitude %>
+    <%= form.text_field :latitude %>
+  </div>
+
+  <div class="field">
+    <%= form.label :longitude %>
+    <%= form.text_field :longitude %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :enterprise_sector_id %>
+    <%= form.text_field :enterprise_sector_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :isPublic %>
+    <%= form.text_field :isPublic %>
+  </div>
+
+  <div class="field">
+    <%= form.label :logo %>
+    <%= form.text_field :logo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :coverPage %>
+    <%= form.text_field :coverPage %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

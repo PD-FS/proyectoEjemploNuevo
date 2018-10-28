@@ -1,0 +1,2 @@
+class EnterpriseSector < ApplicationRecord
+end

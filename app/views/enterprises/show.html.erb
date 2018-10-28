@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @enterprise.name %>
+</p>
+
+<p>
+  <strong>Nit:</strong>
+  <%= @enterprise.nit %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @enterprise.address %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @enterprise.phone %>
+</p>
+
+<p>
+  <strong>Website:</strong>
+  <%= @enterprise.website %>
+</p>
+
+<p>
+  <strong>Facebook:</strong>
+  <%= @enterprise.facebook_id %>
+</p>
+
+<p>
+  <strong>Instagram:</strong>
+  <%= @enterprise.instagram_id %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @enterprise.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @enterprise.longitude %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @enterprise.description %>
+</p>
+
+<p>
+  <strong>Enterprise sector:</strong>
+  <%= @enterprise.enterprise_sector %>
+</p>
+
+<p>
+  <strong>Ispublic:</strong>
+  <%= @enterprise.isPublic %>
+</p>
+
+<p>
+  <strong>Logo:</strong>
+  <%= @enterprise.logo %>
+</p>
+
+<p>
+  <strong>Coverpage:</strong>
+  <%= @enterprise.coverPage %>
+</p>
+
+<%= link_to 'Edit', edit_enterprise_path(@enterprise) %> |
+<%= link_to 'Back', enterprises_path %>
